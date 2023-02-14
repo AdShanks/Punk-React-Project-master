@@ -20,7 +20,7 @@ const BeerList = () => {
     })
   }
   useEffect(getBeers, [url])
-  
+   
 const handleAbv = () => {
   setIsChecked(!isChecked)
   setIsRange(!isRange)
