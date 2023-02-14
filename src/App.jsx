@@ -1,5 +1,5 @@
 import './App.scss';
-import BeerList from "./Components/BeerList/BeerList"
+import BeerList from "./Containers/BeerList/BeerList"
 
 const App =() => {
  
@@ -7,8 +7,7 @@ const App =() => {
   return (
     <>
     <div className="App">
-        
-    <BeerList/>  
+      <BeerList/>  
     </div>
     </>
   );
