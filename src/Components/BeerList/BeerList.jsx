@@ -32,13 +32,7 @@ const handleAbv = () => {
   
   if (isChecked) {
   setUrl(`https://api.punkapi.com/v2/beers?per_page=33&abv_gt=6`)}
-  
-  // else if (isChecked && isRange) {
-  //   setUrl(`https://api.punkapi.com/v2/beers?per_page=33&abv_gt=6&brewed_before=01-2010`)
-  // }
-  
   else {setUrl(`https://api.punkapi.com/v2/beers?per_page=33`)}
-    
     }
 
 const handleRange = () => {
