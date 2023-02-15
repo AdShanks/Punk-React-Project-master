@@ -1,14 +1,14 @@
-import BeerCard from "../../Components/BeerCard/BeerCard";
-import Nav from "../../Components/Nav/Nav";
+import BeerCard from "../../Components/BeerCard/BeerCard"
+import Nav from "../../Components/Nav/Nav"
 import "./BeerList.scss";
 import { useEffect, useState} from "react";
 
 const BeerList = () => {
   const [ searchTerm, setSearchTerm ] = useState("");
   const [ beers, setBeers ] = useState ("");
-  const [url, setUrl] = useState(`https://api.punkapi.com/v2/beers?per_page=33`);
-  const [isChecked, setIsChecked] = useState(true);
-  const [isRange, setIsRange] = useState(true);
+  const [url, setUrl] = useState(`https://api.punkapi.com/v2/beers?per_page=33`)
+  const [isChecked, setIsChecked] = useState(true)
+  const [isRange, setIsRange] = useState(true)
 
   const getBeers = () => {
     fetch(url)
@@ -20,7 +20,7 @@ const BeerList = () => {
     })
   }
   useEffect(getBeers, [url])
-   
+  
 const handleAbv = () => {
   setIsChecked(!isChecked)
   setIsRange(!isRange)
@@ -65,4 +65,5 @@ const mappedBeers = beers && beers.map(beer => {
     </div>
   )
 }
+
 export default BeerList
